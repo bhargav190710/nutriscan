@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriScan | Calorie Finder</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Nutri<span>Scan</span></div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Diary</a></li>
+            <li><a href="#" class="btn-login">Login</a></li>
+        </ul>
+    </nav>
+    <div id="loginModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2 id="authTitle">Welcome Back</h2>
+        <form id="authForm">
+            <div class="input-group">
+                <label>Email</label>
+                <input type="email" id="authEmail" placeholder="Enter your email" required>
+            </div>
+            <div class="input-group">
+                <label>Password</label>
+                <input type="password" id="authPassword" placeholder="Enter password" required>
+            </div>
+            <button type="submit" id="btnLogin" class="btn-submit">Login</button>
+            <button type="button" id="btnSignUp" class="btn-submit" style="background: #333; margin-top: 10px;">Create Account</button>
+        </form>
+    </div>
+    
+</div>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Track Every Bite.</h1>
+            <p>Search over 500,000 foods instantly.</p>
+            
+            <div class="search-container">
+                <input type="text" id="foodInput" placeholder="Try 'Grilled Chicken'...">
+                <button type="button" id="searchBtn">Search</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="results-container">
+       <div class="result-card">
+    <div class="result-header">
+        <div class="food-info-main">
+            <h2 id="foodName">Chicken</h2>
+            <div class="weight-selector">
+                <input type="number" id="foodWeight" value="100">
+                <span>grams (g)</span>
+            </div>
+        </div>
+        <div class="total-calories">
+            <div id="calories">148</div>
+            <span>kcal</span>
+        </div>
+    </div>
+
+    
+            
+            <div class="macro-grid">
+                <div class="macro-item">
+                    <div class="label">Protein</div>
+                    <div class="bar-bg"><div class="bar-fill protein" style="width: 25%;"></div></div>
+                    <div class="value">8g</div>
+                </div>
+                <div class="macro-item">
+                    <div class="label">Carbs</div>
+                    <div class="bar-bg"><div class="bar-fill carbs" style="width: 60%;"></div></div>
+                    <div class="value">35g</div>
+                </div>
+                <div class="macro-item">
+                    <div class="label">Fats</div>
+                    <div class="bar-bg"><div class="bar-fill fats" style="width: 45%;"></div></div>
+                    <div class="value">18g</div>
+                </div>
+            </div>
+            <button class="btn-add">+ Add to Daily Log</button>
+        </div>
+    </section>
+    
+
+    <section class="categories">
+        <h3>Common Categories</h3>
+        <div class="card-container">
+            <div class="card">🍎 <span>Fruits</span></div>
+            <div class="card">🥦 <span>Veggie</span></div>
+            <div class="card">🍗 <span>Proteins</span></div>
+            <div class="card">🥐 <span>Bakery</span></div>
+        </div>
+    </section>
+    <div id="loginModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Welcome Back</h2>
+        <p>Login to save your daily logs and goals.</p>
+        <form id="loginForm">
+            <div class="input-group">
+                <label>Email</label>
+                <input type="email" placeholder="Enter your email" required>
+            </div>
+            <div class="input-group">
+                <label>Password</label>
+                <input type="password" placeholder="Enter password" required>
+            </div>
+            <button type="submit" class="btn-submit">Login</button>
+        </form>
+        <p class="switch-auth">Don't have an account? <a href="#">Sign Up</a></p>
+    </div>
+</div>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
